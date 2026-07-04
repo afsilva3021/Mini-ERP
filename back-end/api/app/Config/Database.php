@@ -26,9 +26,9 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => '(localdb)\\MSSQLLocalDB',
-        'username'     => 'admin_inappconrol',
-        'password'     => 'Jonasmen@5533',
+        'hostname'     => '',
+        'username'     => 'root',
+        'password'     => '',
         'database'     => 'INAPPCONTROL',
         'DBDriver'     => 'SQLSRV',
         'DBPrefix'     => '',
