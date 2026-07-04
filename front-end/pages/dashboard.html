@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - InApp Painel de Controle</title>
+    <link rel="stylesheet" href="../sources/css/style.css">
+
+</head>
+
+<body>
+    <div id="overlay" class="overlay"></div>
+    <nav id="topbar" class="navbar bg-white border-bottom fixed-top topbar px-3">
+        <button id="toggleBtn" class="d-none d-lg-inline-flex btn btn-light btn-icon btn-sm" type="button">
+            <i class="ti ti-menu-2"></i>
+        </button>
+
+        <button id="mobileBtn" class="btn btn-light btn-icon btn-sm d-lg-none me-2" type="button">
+            <i class="ti ti-menu-2"></i>
+        </button>
+
+        <ul class="list-unstyled d-flex align-items-center mb-0 gap-1 ms-auto">
+            <li class="dropdown">
+                <a class="position-relative btn-icon btn-sm btn-light btn rounded-circle" data-bs-toggle="dropdown"
+                    href="#" role="button">
+                    <i class="ti ti-bell fs-5"></i>
+                    <span
+                        class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 ms-n2">2</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
+                    <ul class="list-unstyled p-0 m-0">
+                        <li class="p-3 border-bottom">
+                            <div class="d-flex gap-3">
+                                <img src="../sources/images/avatar/avatar-1.jpg" alt=""
+                                    class="avatar avatar-sm rounded-circle">
+                                <div class="flex-grow-1 small">
+                                    <p class="mb-0">Novo pedido recebido</p>
+                                    <p class="mb-1">Pedido #12345 foi realizado</p>
+                                    <div class="text-secondary">5 minutos atrás</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-3 border-bottom">
+                            <div class="d-flex gap-3">
+                                <img src="../sources/images/avatar/avatar-4.jpg" alt=""
+                                    class="avatar avatar-sm rounded-circle">
+                                <div class="flex-grow-1 small">
+                                    <p class="mb-0">Novo usuário registrado</p>
+                                    <p class="mb-1">Usuário @john_doe se cadastrou</p>
+                                    <div class="text-secondary">30 minutos atrás</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="px-4 py-3 text-center">
+                            <a href="#" class="text-primary">Ver todas notificações</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="ms-3 dropdown">
+                <a href="#" role="button" data-bs-toggle="dropdown">
+                    <img src="../sources/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                </a>
+                <div class="dropdown-menu dropdown-menu-end p-0" style="min-width: 200px;">
+                    <div class="d-flex gap-3 align-items-center border-bottom px-3 py-3">
+                        <img src="../sources/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle">
+                        <div>
+                            <h4 class="mb-0 small">Shrina Tesla</h4>
+                            <p class="mb-0 small text-secondary">@imshrina</p>
+                        </div>
+                    </div>
+                    <div class="p-3 d-flex flex-column gap-1 small lh-lg">
+                        <a href="dashboard.html">Início</a>
+                        <a href="#">Caixa de entrada</a>
+                        <a href="#">Configurações da conta</a>
+                        <a href="auth/login.html" class="text-danger">Sair</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="logo-area">
+            <a href="dashboard.html" class="sidebar-brand" aria-label="InApp Inventory App">
+                <img class="brand-logo-full" src="../sources/images/logo-1.svg" alt="InApp Inventory App">
+                <img class="brand-logo-icon" src="../sources/images/logo-icon.svg" alt="">
+            </a>
+        </div>
+
+        <ul class="nav flex-column">
+            <li class="px-4 py-2">
+                <small class="nav-text">Principal</small>
+            </li>
+            <li>
+                <a class="nav-link " href="dashboard.html">
+                    <i class="ti ti-chart-pie"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-menu-group">
+                <button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#vendasSubmenu" aria-expanded="false" aria-controls="vendasSubmenu">
+                    <i class="ti ti-cash"></i>
+                    <span class="nav-text">Vendas</span>
+                </button>
+
+                <div id="vendasSubmenu" class="collapse sidebar-submenu">
+                    <a class="nav-link" href="callCenter/vendas.html">
+                        <i class="ti ti-cash"></i>
+                        <span class="nav-text">Vender</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-transfer"></i>
+                        <span class="nav-text">Gestoa de vendas</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-receipt"></i>
+                        <span class="nav-text">Carteira de vendas</span>
+                    </a>
+                </div>
+            </li>
+
+            <li class="sidebar-menu-group">
+                <button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#inventorySubmenu" aria-expanded="false" aria-controls="inventorySubmenu">
+                    <i class="ti ti-box"></i>
+                    <span class="nav-text">Inventário</span>
+
+                </button>
+
+                <div id="inventorySubmenu" class="collapse sidebar-submenu">
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-list"></i>
+                        <span class="nav-text">Lista de produtos</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-plus"></i>
+                        <span class="nav-text">Movimentações</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-arrows-exchange"></i>
+                        <span class="nav-text">Manutenção</span>
+                    </a>
+                </div>
+            </li>
+            <li class="sidebar-menu-group">
+                <button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#cadastroSubmenu" aria-expanded="false" aria-controls="cadastroSubmenu">
+                    <i class="ti ti-address-book"></i>
+                    <span class="nav-text">Cadastros</span>
+
+                </button>
+
+                <div id="cadastroSubmenu" class="collapse sidebar-submenu">
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-list"></i>
+                        <span class="nav-text">Cliente</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-plus"></i>
+                        <span class="nav-text">Fornecedor</span>
+                    </a>
+                </div>
+            </li>
+            <li class="sidebar-menu-group">
+                <button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#separacaoSubmenu" aria-expanded="false" aria-controls="separacaoSubmenu">
+                    <i class="ti ti-box"></i>
+                    <span class="nav-text">Operacional</span>
+
+                </button>
+
+                <div id="separacaoSubmenu" class="collapse sidebar-submenu">
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-list"></i>
+                        <span class="nav-text">Separacao</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-plus"></i>
+                        <span class="nav-text">Conferencia</span>
+                    </a>
+                    <a class="nav-link" href="#">
+                        <i class="ti ti-arrows-exchange"></i>
+                        <span class="nav-text">Entrada</span>
+                    </a>
+                </div>
+            </li>
+            <li>
+                <a class="nav-link" href="#">
+                    <i class="ti ti-file-text"></i>
+                    <span class="nav-text">Documentação</span>
+                </a>
+            </li>
+            <li class="px-4 pt-4 pb-2">
+                <small class="nav-text">Relatórios</small>
+            </li>
+            <button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#relatorioSubMenu" aria-expanded="false" aria-controls="relatorioSubMenu">
+                <i class="ti ti-receipt"></i>
+                <span class="nav-text">Relatórios</span>
+
+            </button>
+
+            <div id="relatorioSubMenu" class="collapse sidebar-submenu">
+                <a class="nav-link" href="#">
+                    <i class="ti ti-receipt"></i>
+                    <span class="nav-text">Vendas por produtos</span>
+                </a>
+                <a class="nav-link" href="#">
+                    <i class="ti ti-receipt"></i>
+                    <span class="nav-text">Vendas por vendedores</span>
+                </a>
+                <a class="nav-link" href="#">
+                    <i class="ti ti-receipt"></i>
+                    <span class="nav-text">Cadastro de Produtos</span>
+                </a>
+                <a class="nav-link" href="#">
+                    <i class="ti ti-arrows-exchange"></i>
+                    <span class="nav-text">Movimentações</span>
+                </a>
+            </div>
+            <li class="px-4 pt-4 pb-2">
+                <small class="nav-text">Configuração</small>
+            </li>
+            <li>
+                <a class="nav-link" href="#">
+                    <i class="ti ti-logout"></i>
+                    <span class="nav-text">Configuração</span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="auth/login.html">
+                    <i class="ti ti-user-plus"></i>
+                    <span class="nav-text">Sair</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+
+    <main id="content" class="content py-10">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-6">
+                        <h1 class="fs-3 mb-1">Dashboard</h1>
+                        <p>Seu conteúdo principal vai aqui...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card p-4 bg-primary bg-opacity-10 border border-primary border-opacity-25 rounded-2">
+                        <div class="d-flex gap-3">
+                            <div class="icon-shape icon-md bg-primary text-white rounded-2">
+                                <i class="ti ti-report-analytics fs-4"></i>
+                            </div>
+                            <div>
+                                <h2 class="mb-3 fs-6">Total de Vendas</h2>
+                                <h3 class="fw-bold mb-0">R$: 25,000</h3>
+                                <p class="text-primary mb-0 small">+5% desde o mês passado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card p-4 bg-success bg-opacity-10 border border-success border-opacity-25 rounded-2">
+                        <div class="d-flex gap-3">
+                            <div class="icon-shape icon-md bg-success text-white rounded-2">
+                                <i class="ti ti-repeat fs-4"></i>
+                            </div>
+                            <div>
+                                <h2 class="mb-3 fs-6">Total de Compras</h2>
+                                <h3 class="fw-bold mb-0">$18,000</h3>
+                                <p class="text-success mb-0 small">+22% desde o mês passado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card p-4 bg-info bg-opacity-10 border border-info border-opacity-25 rounded-2">
+                        <div class="d-flex gap-3">
+                            <div class="icon-shape icon-md bg-info text-white rounded-2">
+                                <i class="ti ti-currency-dollar fs-4"></i>
+                            </div>
+                            <div>
+                                <h2 class="mb-3 fs-6">Total de Despesas</h2>
+                                <h3 class="fw-bold mb-0">$9,000</h3>
+                                <p class="text-info mb-0 small">+10% desde o mês passado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-xl-3">
+                    <div class="card p-4 bg-warning bg-opacity-10 border border-warning border-opacity-25 rounded-2">
+                        <div class="d-flex gap-3">
+                            <div class="icon-shape icon-md bg-warning text-white rounded-2">
+                                <i class="ti ti-notes fs-4"></i>
+                            </div>
+                            <div>
+                                <h2 class="mb-3 fs-6">Faturas Pendentes</h2>
+                                <h3 class="fw-bold mb-0">$25,000</h3>
+                                <p class="text-warning mb-0 small">+35% desde o mês passado</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between border-bottom pb-5 mb-3">
+                                <div>
+                                    <h3 class="fw-bold h4">$25,458</h3>
+                                    <span>Lucro Total</span>
+                                </div>
+                                <i class="ti ti-layers-subtract fs-1 text-primary"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center small">
+                                <div class="text-muted"><span class="text-success">+35%</span> vs Mês Passado</div>
+                                <a href="#" class="link-primary text-decoration-underline">Visualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between border-bottom pb-5 mb-3">
+                                <div>
+                                    <h3 class="fw-bold h4">$45,458</h3>
+                                    <span>Total de Reembolsos</span>
+                                </div>
+                                <i class="ti ti-credit-card fs-1 text-danger"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center small">
+                                <div class="text-muted"><span class="text-danger">-20%</span> vs Mês Passado</div>
+                                <a href="#" class="link-primary text-decoration-underline">Visualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-12">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between border-bottom pb-5 mb-3">
+                                <div>
+                                    <h3 class="fw-bold h4">$34,458</h3>
+                                    <span>Total de Despesas</span>
+                                </div>
+                                <i class="ti ti-cash-banknote fs-1 text-warning"></i>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center small">
+                                <div class="text-muted"><span class="text-warning">-20%</span> vs Mês Passado</div>
+                                <a href="#" class="link-primary text-decoration-underline">Visualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-3 mb-3">
+                <div class="col-12 col-xl-6">
+                    <div class="card">
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-transparent px-4 py-3">
+                            <h3 class="h5 mb-0">Vendas vs Compras</h3>
+                            <select class="form-select form-select-sm chart-select">
+                                <option selected>Este Ano</option>
+                                <option>Este Mês</option>
+                                <option>Esta Semana</option>
+                            </select>
+                        </div>
+                        <div class="card-body p-4 chart-scroll">
+                            <div id="salesPurchaseChart" aria-label="Gráfico de vendas e compras"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-6">
+                    <div class="card">
+                        <div
+                            class="card-header d-flex justify-content-between align-items-center bg-transparent px-4 py-3">
+                            <h3 class="h5 mb-0">Informações Gerais</h3>
+                            <select class="form-select form-select-sm chart-select">
+                                <option selected>Últimos 6 Meses</option>
+                                <option>Este Mês</option>
+                                <option>Esta Semana</option>
+                            </select>
+                        </div>
+                        <div class="card-body p-4">
+                            <h3 class="h6">Visão Geral de Clientes</h3>
+                            <div class="row align-items-center customer-overview">
+                                <div class="col-sm-6">
+                                    <div id="customerChart" aria-label="Gráfico geral de clientes"></div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="row">
+                                        <div class="col-6 border-end text-center">
+                                            <h2 class="mb-1">5.5K</h2>
+                                            <p class="text-success mb-2">Primeira Vez</p>
+                                            <span class="badge bg-success">+ 25%</span>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <h2 class="mb-1">3.5K</h2>
+                                            <p class="text-warning mb-2">Recorrentes</p>
+                                            <span class="badge bg-success">+ 21%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row text-center border-top mt-4 pt-4">
+                                <div class="col-4 border-end">
+                                    <h3 class="fw-bold mb-2">6987</h3>
+                                    <small class="text-secondary">Fornecedores</small>
+                                </div>
+                                <div class="col-4 border-end">
+                                    <h3 class="fw-bold mb-2">4896</h3>
+                                    <small class="text-secondary">Clientes</small>
+                                </div>
+                                <div class="col-4">
+                                    <h3 class="fw-bold mb-2">487</h3>
+                                    <small class="text-secondary">Pedidos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center py-2 mt-6 text-secondary">
+                <p class="mb-0">
+                    Copyright &copy; 2026 InApp Painel de Controle.
+                </p>
+            </footer>
+
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../sources/js/config.js"></script>
+    <script src="../sources/js/api.js"></script>
+    <script src="../sources/js/app.js"></script>
+    <script src="../sources/js/chart.js"></script>
+</body>
+
+</html>

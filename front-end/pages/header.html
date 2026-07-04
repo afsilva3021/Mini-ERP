@@ -1,0 +1,66 @@
+<nav id="topbar" class="navbar bg-white border-bottom fixed-top topbar px-3">
+    <button id="toggleBtn" class="d-none d-lg-inline-flex btn btn-light btn-icon btn-sm" type="button">
+        <i class="ti ti-layout-sidebar-left-expand"></i>
+    </button>
+
+    <button id="mobileBtn" class="btn btn-light btn-icon btn-sm d-lg-none me-2" type="button">
+        <i class="ti ti-layout-sidebar-left-expand"></i>
+    </button>
+
+    <ul class="list-unstyled d-flex align-items-center mb-0 gap-1 ms-auto">
+        <li class="dropdown">
+            <a class="position-relative btn-icon btn-sm btn-light btn rounded-circle" data-bs-toggle="dropdown" href="#" role="button">
+                <i class="ti ti-bell fs-5"></i>
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 ms-n2">2</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
+                <ul class="list-unstyled p-0 m-0">
+                    <li class="p-3 border-bottom">
+                        <div class="d-flex gap-3">
+                            <img src="../sources/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                            <div class="flex-grow-1 small">
+                                <p class="mb-0">Novo pedido recebido</p>
+                                <p class="mb-1">Pedido #12345 foi realizado</p>
+                                <div class="text-secondary">5 minutos atrás</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="p-3 border-bottom">
+                        <div class="d-flex gap-3">
+                            <img src="../sources/images/avatar/avatar-4.jpg" alt="" class="avatar avatar-sm rounded-circle">
+                            <div class="flex-grow-1 small">
+                                <p class="mb-0">Novo usuário registrado</p>
+                                <p class="mb-1">Usuário @john_doe se cadastrou</p>
+                                <div class="text-secondary">30 minutos atrás</div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="px-4 py-3 text-center">
+                        <a href="#" class="text-primary">Ver todas notificações</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="ms-3 dropdown">
+            <a href="#" role="button" data-bs-toggle="dropdown">
+                <img src="../sources/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-sm rounded-circle">
+            </a>
+            <div class="dropdown-menu dropdown-menu-end p-0" style="min-width: 200px;">
+                <div class="d-flex gap-3 align-items-center border-bottom px-3 py-3">
+                    <img src="../sources/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle">
+                    <div>
+                        <h4 class="mb-0 small">Shrina Tesla</h4>
+                        <p class="mb-0 small text-secondary">@imshrina</p>
+                    </div>
+                </div>
+                <div class="p-3 d-flex flex-column gap-1 small lh-lg">
+                    <a href="dashboard.html">Início</a>
+                    <a href="#">Caixa de entrada</a>
+                    <a href="#">Configurações da conta</a>
+                    <a href="auth/login.html" class="text-danger">Sair</a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>

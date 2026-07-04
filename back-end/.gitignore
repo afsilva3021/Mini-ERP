@@ -1,0 +1,30 @@
+# Dependências do backend
+api/vendor/
+
+# Arquivos de ambiente
+api/.env
+api/.env.*
+
+# Arquivos gerados em runtime
+api/writable/cache/*
+!api/writable/cache/index.html
+api/writable/logs/*
+!api/writable/logs/index.html
+api/writable/session/*
+!api/writable/session/index.html
+api/writable/uploads/*
+!api/writable/uploads/index.html
+api/writable/debugbar/*
+!api/writable/debugbar/index.html
+
+# Testes e relatórios
+api/phpunit.xml
+api/.phpunit.result.cache
+api/tests/coverage*
+
+# Editores
+.vscode/
+.idea/
+
+# Logs temporários
+*.log

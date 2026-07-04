@@ -1,0 +1,18 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+._*
+
+# Editores
+.vscode/
+.idea/
+
+# Ambiente local
+.env
+.env.*
+
+# Arquivos temporários
+*.log
+*.tmp
+*.cache

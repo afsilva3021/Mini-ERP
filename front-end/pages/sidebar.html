@@ -1,0 +1,153 @@
+<aside id="sidebar" class="sidebar">
+	<div class="logo-area">
+		<a href="dashboard.html" class="d-inline-flex align-items-center text-decoration-none">
+			<img src="../sources/images/logo-icon.svg" alt="" width="24">
+			<span class="logo-text ms-2"><img src="../sources/images/logo.svg" alt=""></span>
+		</a>
+	</div>
+
+	<ul class="nav flex-column">
+		<li class="px-4 py-2">
+			<small class="nav-text">Principal</small>
+		</li>
+		<li>
+			<a class="nav-link " href="dashboard.html">
+				<i class="ti ti-chart-pie"></i>
+				<span class="nav-text">Dashboard</span>
+			</a>
+		</li>
+		<li class="sidebar-menu-group">
+			<button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vendasSubmenu" aria-expanded="false" aria-controls="vendasSubmenu">
+				<i class="ti ti-cash"></i>
+				<span class="nav-text">Vendas</span>
+				<i class="ti ti-chevron-down submenu-arrow nav-text"></i>
+			</button>
+
+			<div id="vendasSubmenu" class="collapse sidebar-submenu">
+				<a class="nav-link" href="callCenter/vendas.html">
+					<i class="ti ti-cash"></i>
+					<span class="nav-text">Vender</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-transfer"></i>
+					<span class="nav-text">Gestoa de vendas</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-receipt"></i>
+					<span class="nav-text">Carteira de vendas</span>
+				</a>
+			</div>
+		</li>
+
+		<li class="sidebar-menu-group">
+			<button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#inventorySubmenu" aria-expanded="false" aria-controls="inventorySubmenu">
+				<i class="ti ti-box"></i>
+				<span class="nav-text">Inventário</span>
+				<i class="ti ti-chevron-down submenu-arrow nav-text"></i>
+			</button>
+
+			<div id="inventorySubmenu" class="collapse sidebar-submenu">
+				<a class="nav-link" href="#">
+					<i class="ti ti-list"></i>
+					<span class="nav-text">Lista de produtos</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-plus"></i>
+					<span class="nav-text">Movimentações</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-arrows-exchange"></i>
+					<span class="nav-text">Manutenção</span>
+				</a>
+			</div>
+		</li>
+		<li class="sidebar-menu-group">
+			<button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cadastroSubmenu" aria-expanded="false" aria-controls="cadastroSubmenu">
+				<i class="ti ti-address-book"></i>
+				<span class="nav-text">Cadastros</span>
+				<i class="ti ti-chevron-down submenu-arrow nav-text"></i>
+			</button>
+
+			<div id="cadastroSubmenu" class="collapse sidebar-submenu">
+				<a class="nav-link" href="#">
+					<i class="ti ti-list"></i>
+					<span class="nav-text">Cliente</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-plus"></i>
+					<span class="nav-text">Fornecedor</span>
+				</a>
+			</div>
+		</li>
+		<li class="sidebar-menu-group">
+			<button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#separacaoSubmenu" aria-expanded="false" aria-controls="separacaoSubmenu">
+				<i class="ti ti-box"></i>
+				<span class="nav-text">Operacional</span>
+				<i class="ti ti-chevron-down submenu-arrow nav-text"></i>
+			</button>
+
+			<div id="separacaoSubmenu" class="collapse sidebar-submenu">
+				<a class="nav-link" href="#">
+					<i class="ti ti-list"></i>
+					<span class="nav-text">Separacao</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-plus"></i>
+					<span class="nav-text">Conferencia</span>
+				</a>
+				<a class="nav-link" href="#">
+					<i class="ti ti-arrows-exchange"></i>
+					<span class="nav-text">Entrada</span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a class="nav-link" href="#">
+				<i class="ti ti-file-text"></i>
+				<span class="nav-text">Documentação</span>
+			</a>
+		</li>
+		<li class="px-4 pt-4 pb-2">
+			<small class="nav-text">Relatórios</small>
+		</li>
+		<button class="nav-link sidebar-menu-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#relatorioSubMenu" aria-expanded="false" aria-controls="relatorioSubMenu">
+			<i class="ti ti-receipt"></i>
+			<span class="nav-text">Relatórios</span>
+			<i class="ti ti-chevron-down submenu-arrow nav-text"></i>
+		</button>
+
+		<div id="relatorioSubMenu" class="collapse sidebar-submenu">
+			<a class="nav-link" href="#">
+				<i class="ti ti-receipt"></i>
+				<span class="nav-text">Vendas por produtos</span>
+			</a>
+			<a class="nav-link" href="#">
+				<i class="ti ti-receipt"></i>
+				<span class="nav-text">Vendas por vendedores</span>
+			</a>
+			<a class="nav-link" href="#">
+				<i class="ti ti-receipt"></i>
+				<span class="nav-text">Cadastro de Produtos</span>
+			</a>
+			<a class="nav-link" href="#">
+				<i class="ti ti-arrows-exchange"></i>
+				<span class="nav-text">Movimentações</span>
+			</a>
+		</div>
+		<li class="px-4 pt-4 pb-2">
+			<small class="nav-text">Configuração</small>
+		</li>
+		<li>
+			<a class="nav-link" href="#">
+				<i class="ti ti-logout"></i>
+				<span class="nav-text">Configuração</span>
+			</a>
+		</li>
+		<li>
+			<a class="nav-link" href="auth/login.html">
+				<i class="ti ti-user-plus"></i>
+				<span class="nav-text">Sair</span>
+			</a>
+		</li>
+	</ul>
+</aside>
